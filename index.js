@@ -6,7 +6,7 @@ app.use(express.json());
 
 const localStorage = new LocalStorage("./start");
 
-app.post("/login", (req, res) => {
+app.get("/login", (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
